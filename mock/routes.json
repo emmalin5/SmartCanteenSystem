@@ -1,0 +1,14 @@
+{
+  "/admin/users": "/users",
+  "/admin/transactions": "/transactions",
+  "/admin/students": "/users",
+  "/admin/students/:id": "/users/:id",
+  "/admin/restaurants": "/restaurants",
+  "/admin/restaurants/:id": "/restaurants/:id",
+  "/owner/menu": "/menuItems",
+  "/owner/menu/:id": "/menuItems/:id",
+  "/owner/students": "/users",
+  "/student/:id/dashboard": "/studentDashboards/:id",
+  "/student/:id/transactions": "/transactions?studentId=:id",
+  "/owner/dashboard": "/ownerDashboard/OWNER001"
+}

@@ -30,7 +30,7 @@ export default function Home() {
               Access Dashboard
             </h2>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* Student Dashboard Card */}
               <Link href="/student/STU001">
                 <div className="card hover:shadow-lg transition-shadow duration-200 cursor-pointer border-2 border-primary-200 hover:border-primary-400">
@@ -70,6 +70,26 @@ export default function Home() {
                   </div>
                 </div>
               </Link>
+
+              {/* Restaurant Owner Dashboard Card */}
+              <Link href="/owner">
+                <div className="card hover:shadow-lg transition-shadow duration-200 cursor-pointer border-2 border-emerald-200 hover:border-emerald-400">
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                      <svg className="w-8 h-8 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 7h18M3 12h18M3 17h18" />
+                      </svg>
+                    </div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">Restaurant Owner</h3>
+                    <p className="text-gray-600 text-sm mb-4">
+                      Track orders, manage menu items, and monitor stock
+                    </p>
+                    <div className="btn-primary inline-block bg-emerald-600 hover:bg-emerald-700">
+                      Go to Dashboard
+                    </div>
+                  </div>
+                </div>
+              </Link>
             </div>
 
             <div className="mt-8 pt-6 border-t border-gray-200">
@@ -84,4 +104,6 @@ export default function Home() {
     </>
   );
 }
+
+
 
