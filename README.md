@@ -15,10 +15,15 @@ RFID-based IoT cashless university canteen payment system frontend built with Ne
 - User management (view all students)
 - Block/Unblock cards
 - Transaction history table
-- Analytics dashboard with:
-  - Total users, transactions, revenue
-  - Transactions by meal type
-  - Transactions by location
+- Student CRUD (create, update, delete)
+- Student balance top-up
+- Restaurant CRUD (create, update, delete)
+- Search in students, restaurants, and transactions
+
+### Restaurant Owner Dashboard
+- Menu item CRUD (create, update, delete)
+- Low stock alerts
+- Students assigned this month (count + list)
 
 ## Tech Stack
 
@@ -139,6 +144,11 @@ JSON Server will run at http://localhost:3001 and the frontend will use it autom
 ### Restaurant Owner Endpoints
 
 - `GET /api/owner/dashboard` - Get restaurant owner dashboard data
+- `GET /api/owner/menu` - Get menu items
+- `POST /api/owner/menu` - Create menu item
+- `PUT /api/owner/menu/:id` - Update menu item
+- `DELETE /api/owner/menu/:id` - Delete menu item
+- `GET /api/owner/students` - Get students list for owner dashboard
 
 **Note:** All API endpoints are fake/mock endpoints that return simulated data. They are not connected to a real backend.
 
