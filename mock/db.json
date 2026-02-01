@@ -1,0 +1,423 @@
+{
+  "users": [
+    {
+      "id": "STU001",
+      "name": "John Doe",
+      "email": "john.doe@university.edu",
+      "cardId": "CARD123456",
+      "restaurantId": "REST001",
+      "restaurantAssignedAt": "2026-01-15T09:00:00Z",
+      "cardStatus": "active",
+      "balance": 1250.5,
+      "registrationDate": "2024-09-01T00:00:00Z",
+      "totalTransactions": 142,
+      "totalSpent": 6250.0
+    },
+    {
+      "id": "STU002",
+      "name": "Jane Smith",
+      "email": "jane.smith@university.edu",
+      "cardId": "CARD123457",
+      "restaurantId": "REST002",
+      "restaurantAssignedAt": "2026-01-10T09:00:00Z",
+      "cardStatus": "active",
+      "balance": 850.25,
+      "registrationDate": "2024-09-01T00:00:00Z",
+      "totalTransactions": 98,
+      "totalSpent": 4320.5
+    },
+    {
+      "id": "STU003",
+      "name": "Bob Johnson",
+      "email": "bob.johnson@university.edu",
+      "cardId": "CARD123458",
+      "restaurantId": "REST001",
+      "restaurantAssignedAt": "2026-01-20T09:00:00Z",
+      "cardStatus": "blocked",
+      "balance": 0,
+      "registrationDate": "2024-09-02T00:00:00Z",
+      "totalTransactions": 45,
+      "totalSpent": 2100.0,
+      "blockReason": "Lost card reported"
+    },
+    {
+      "id": "STU004",
+      "name": "Alice Williams",
+      "email": "alice.williams@university.edu",
+      "cardId": "CARD123459",
+      "restaurantId": "REST003",
+      "restaurantAssignedAt": "2026-01-12T09:00:00Z",
+      "cardStatus": "active",
+      "balance": 2100.75,
+      "registrationDate": "2024-09-02T00:00:00Z",
+      "totalTransactions": 156,
+      "totalSpent": 7890.25
+    },
+    {
+      "id": "STU005",
+      "name": "Charlie Brown",
+      "email": "charlie.brown@university.edu",
+      "cardId": "CARD123460",
+      "restaurantId": "REST002",
+      "restaurantAssignedAt": "2026-01-18T09:00:00Z",
+      "cardStatus": "active",
+      "balance": 450,
+      "registrationDate": "2024-09-03T00:00:00Z",
+      "totalTransactions": 67,
+      "totalSpent": 3150.0
+    },
+    {
+      "id": "STU006",
+      "name": "Diana Prince",
+      "email": "diana.prince@university.edu",
+      "cardId": "CARD123461",
+      "restaurantId": "REST001",
+      "restaurantAssignedAt": "2026-01-22T09:00:00Z",
+      "cardStatus": "active",
+      "balance": 1750.5,
+      "registrationDate": "2024-09-03T00:00:00Z",
+      "totalTransactions": 123,
+      "totalSpent": 5670.75
+    },
+    {
+      "id": "STU007",
+      "name": "Ethan Hunt",
+      "email": "ethan.hunt@university.edu",
+      "cardId": "CARD123462",
+      "restaurantId": "REST003",
+      "restaurantAssignedAt": "2026-01-05T09:00:00Z",
+      "cardStatus": "blocked",
+      "balance": 320,
+      "registrationDate": "2024-09-04T00:00:00Z",
+      "totalTransactions": 34,
+      "totalSpent": 1680.0,
+      "blockReason": "Suspicious activity"
+    },
+    {
+      "id": "STU008",
+      "name": "Fiona Chen",
+      "email": "fiona.chen@university.edu",
+      "cardId": "CARD123463",
+      "restaurantId": "REST002",
+      "restaurantAssignedAt": "2026-01-08T09:00:00Z",
+      "cardStatus": "active",
+      "balance": 980.25,
+      "registrationDate": "2024-09-04T00:00:00Z",
+      "totalTransactions": 89,
+      "totalSpent": 4120.5
+    }
+  ],
+  "studentDashboards": [
+    {
+      "id": "STU001",
+      "studentId": "STU001",
+      "studentName": "John Doe",
+      "cardId": "CARD123456",
+      "cardStatus": "active",
+      "balance": 1250.5,
+      "mealsToday": [
+        {
+          "id": "MEAL001",
+          "mealType": "Breakfast",
+          "time": "08:30",
+          "amount": 45,
+          "location": "Main Canteen",
+          "status": "completed"
+        },
+        {
+          "id": "MEAL002",
+          "mealType": "Lunch",
+          "time": "13:15",
+          "amount": 65,
+          "location": "Main Canteen",
+          "status": "completed"
+        }
+      ],
+      "monthlyUsage": {
+        "currentMonth": "November 2024",
+        "totalSpent": 1850,
+        "totalMeals": 42,
+        "averagePerMeal": 44.05,
+        "dailyAverage": 61.67,
+        "breakdown": [
+          { "date": "2024-11-01", "amount": 120, "meals": 3 },
+          { "date": "2024-11-02", "amount": 95, "meals": 2 },
+          { "date": "2024-11-03", "amount": 110, "meals": 3 },
+          { "date": "2024-11-04", "amount": 85, "meals": 2 },
+          { "date": "2024-11-05", "amount": 130, "meals": 3 }
+        ]
+      },
+      "nextMealWindow": {
+        "mealType": "Dinner",
+        "startTime": "18:00",
+        "endTime": "20:00",
+        "location": "Main Canteen",
+        "isActive": false
+      },
+      "notifications": [
+        {
+          "id": "NOTIF001",
+          "type": "info",
+          "title": "Low Balance Alert",
+          "message": "Your balance is below ₹200. Please recharge soon.",
+          "timestamp": "2024-11-05T10:30:00Z",
+          "read": false
+        },
+        {
+          "id": "NOTIF002",
+          "type": "success",
+          "title": "Transaction Successful",
+          "message": "Payment of ₹65.00 completed at Main Canteen",
+          "timestamp": "2024-11-05T13:15:00Z",
+          "read": false
+        }
+      ]
+    },
+    {
+      "id": "STU002",
+      "studentId": "STU002",
+      "studentName": "Jane Smith",
+      "cardId": "CARD123457",
+      "cardStatus": "active",
+      "balance": 850.25,
+      "mealsToday": [],
+      "monthlyUsage": {
+        "currentMonth": "November 2024",
+        "totalSpent": 1320.5,
+        "totalMeals": 30,
+        "averagePerMeal": 44.02,
+        "dailyAverage": 52.5,
+        "breakdown": [
+          { "date": "2024-11-01", "amount": 90, "meals": 2 },
+          { "date": "2024-11-02", "amount": 110, "meals": 3 },
+          { "date": "2024-11-03", "amount": 75, "meals": 2 }
+        ]
+      },
+      "nextMealWindow": {
+        "mealType": "Lunch",
+        "startTime": "12:00",
+        "endTime": "14:00",
+        "location": "North Canteen",
+        "isActive": false
+      },
+      "notifications": []
+    },
+    {
+      "id": "STU003",
+      "studentId": "STU003",
+      "studentName": "Bob Johnson",
+      "cardId": "CARD123458",
+      "cardStatus": "blocked",
+      "balance": 0,
+      "mealsToday": [],
+      "monthlyUsage": {
+        "currentMonth": "November 2024",
+        "totalSpent": 700,
+        "totalMeals": 16,
+        "averagePerMeal": 43.75,
+        "dailyAverage": 35,
+        "breakdown": [
+          { "date": "2024-11-01", "amount": 50, "meals": 1 },
+          { "date": "2024-11-02", "amount": 85, "meals": 2 }
+        ]
+      },
+      "nextMealWindow": {
+        "mealType": "Dinner",
+        "startTime": "18:00",
+        "endTime": "20:00",
+        "location": "Main Canteen",
+        "isActive": false
+      },
+      "notifications": [
+        {
+          "id": "NOTIF003",
+          "type": "warning",
+          "title": "Card Blocked",
+          "message": "Your card is blocked. Please contact admin.",
+          "timestamp": "2024-11-05T08:00:00Z",
+          "read": false
+        }
+      ]
+    }
+  ],
+  "transactions": [
+    {
+      "id": "TXN0001",
+      "studentId": "STU001",
+      "studentName": "John Doe",
+      "cardId": "CARD123456",
+      "mealType": "Breakfast",
+      "amount": 45,
+      "location": "Main Canteen",
+      "timestamp": "2024-11-05T08:30:00Z",
+      "status": "completed",
+      "transactionType": "payment"
+    },
+    {
+      "id": "TXN0002",
+      "studentId": "STU001",
+      "studentName": "John Doe",
+      "cardId": "CARD123456",
+      "mealType": "Lunch",
+      "amount": 65,
+      "location": "Main Canteen",
+      "timestamp": "2024-11-05T13:15:00Z",
+      "status": "completed",
+      "transactionType": "payment"
+    },
+    {
+      "id": "TXN0003",
+      "studentId": "STU002",
+      "studentName": "Jane Smith",
+      "cardId": "CARD123457",
+      "mealType": "Lunch",
+      "amount": 55,
+      "location": "North Canteen",
+      "timestamp": "2024-11-05T12:40:00Z",
+      "status": "completed",
+      "transactionType": "payment"
+    },
+    {
+      "id": "TXN0004",
+      "studentId": "STU003",
+      "studentName": "Bob Johnson",
+      "cardId": "CARD123458",
+      "mealType": "Dinner",
+      "amount": 70,
+      "location": "South Canteen",
+      "timestamp": "2024-11-04T19:10:00Z",
+      "status": "completed",
+      "transactionType": "payment"
+    },
+    {
+      "id": "TXN0005",
+      "studentId": "STU004",
+      "studentName": "Alice Williams",
+      "cardId": "CARD123459",
+      "mealType": "Breakfast",
+      "amount": 38,
+      "location": "Cafeteria",
+      "timestamp": "2024-11-04T08:10:00Z",
+      "status": "completed",
+      "transactionType": "payment"
+    },
+    {
+      "id": "TXN0006",
+      "studentId": "STU005",
+      "studentName": "Charlie Brown",
+      "cardId": "CARD123460",
+      "mealType": "Snacks",
+      "amount": 32,
+      "location": "Main Canteen",
+      "timestamp": "2024-11-04T15:30:00Z",
+      "status": "completed",
+      "transactionType": "payment"
+    },
+    {
+      "id": "TXN0007",
+      "studentId": "STU006",
+      "studentName": "Diana Prince",
+      "cardId": "CARD123461",
+      "mealType": "Lunch",
+      "amount": 62,
+      "location": "North Canteen",
+      "timestamp": "2024-11-03T12:50:00Z",
+      "status": "completed",
+      "transactionType": "payment"
+    },
+    {
+      "id": "TXN0008",
+      "studentId": "STU007",
+      "studentName": "Ethan Hunt",
+      "cardId": "CARD123462",
+      "mealType": "Dinner",
+      "amount": 75,
+      "location": "South Canteen",
+      "timestamp": "2024-11-03T19:20:00Z",
+      "status": "completed",
+      "transactionType": "payment"
+    },
+    {
+      "id": "TXN0009",
+      "studentId": "STU008",
+      "studentName": "Fiona Chen",
+      "cardId": "CARD123463",
+      "mealType": "Breakfast",
+      "amount": 40,
+      "location": "Main Canteen",
+      "timestamp": "2024-11-03T08:05:00Z",
+      "status": "completed",
+      "transactionType": "payment"
+    }
+  ],
+  "ownerDashboard": [
+    {
+      "id": "OWNER001",
+      "ownerId": "OWN001",
+      "ownerName": "Rahul Sharma",
+      "restaurantId": "REST001",
+      "restaurantName": "Main Canteen",
+      "summary": {
+        "totalOrders": 124,
+        "totalRevenue": 6840.5,
+        "avgOrderValue": 55.17,
+        "activeMenuItems": 18,
+        "lowStockItems": 3
+      },
+      "menuItems": [
+        { "id": "MENU001", "name": "Veg Thali", "category": "Lunch", "price": 65, "available": true, "stock": 24 },
+        { "id": "MENU002", "name": "Paneer Wrap", "category": "Snacks", "price": 45, "available": true, "stock": 14 },
+        { "id": "MENU003", "name": "Masala Dosa", "category": "Breakfast", "price": 40, "available": true, "stock": 8 },
+        { "id": "MENU004", "name": "Chicken Biryani", "category": "Lunch", "price": 80, "available": false, "stock": 0 },
+        { "id": "MENU005", "name": "Fruit Salad", "category": "Snacks", "price": 35, "available": true, "stock": 6 },
+        { "id": "MENU006", "name": "Idli Sambar", "category": "Breakfast", "price": 30, "available": true, "stock": 20 }
+      ],
+      "recentOrders": [
+        { "id": "ORD001", "orderNumber": "#1024", "customerName": "STU001", "itemsCount": 2, "total": 95, "status": "completed", "time": "10:05 AM" },
+        { "id": "ORD002", "orderNumber": "#1025", "customerName": "STU004", "itemsCount": 1, "total": 65, "status": "preparing", "time": "10:12 AM" },
+        { "id": "ORD003", "orderNumber": "#1026", "customerName": "STU002", "itemsCount": 3, "total": 120, "status": "completed", "time": "10:20 AM" },
+        { "id": "ORD004", "orderNumber": "#1027", "customerName": "STU008", "itemsCount": 1, "total": 45, "status": "completed", "time": "10:30 AM" }
+      ],
+      "lowStockItems": [
+        { "id": "MENU003", "name": "Masala Dosa", "category": "Breakfast", "stock": 8 },
+        { "id": "MENU005", "name": "Fruit Salad", "category": "Snacks", "stock": 6 },
+        { "id": "MENU002", "name": "Paneer Wrap", "category": "Snacks", "stock": 14 }
+      ]
+    }
+  ],
+  "menuItems": [
+    { "id": "MENU001", "name": "Veg Thali", "category": "Lunch", "price": 65, "available": true, "stock": 24 },
+    { "id": "MENU002", "name": "Paneer Wrap", "category": "Snacks", "price": 45, "available": true, "stock": 14 },
+    { "id": "MENU003", "name": "Masala Dosa", "category": "Breakfast", "price": 40, "available": true, "stock": 8 },
+    { "id": "MENU004", "name": "Chicken Biryani", "category": "Lunch", "price": 80, "available": false, "stock": 0 },
+    { "id": "MENU005", "name": "Fruit Salad", "category": "Snacks", "price": 35, "available": true, "stock": 6 },
+    { "id": "MENU006", "name": "Idli Sambar", "category": "Breakfast", "price": 30, "available": true, "stock": 20 }
+  ],
+  "restaurants": [
+    {
+      "id": "REST001",
+      "name": "Main Canteen",
+      "location": "Campus Center",
+      "ownerName": "Rahul Sharma",
+      "status": "active",
+      "openingHours": "08:00-20:00"
+    },
+    {
+      "id": "REST002",
+      "name": "North Canteen",
+      "location": "North Wing",
+      "ownerName": "Priya Desai",
+      "status": "active",
+      "openingHours": "07:30-19:30"
+    },
+    {
+      "id": "REST003",
+      "name": "Cafeteria",
+      "location": "Library Block",
+      "ownerName": "Arjun Patel",
+      "status": "inactive",
+      "openingHours": "09:00-17:00"
+    }
+  ],
+  "lostCards": []
+}

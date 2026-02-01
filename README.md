@@ -15,10 +15,15 @@ RFID-based IoT cashless university canteen payment system frontend built with Ne
 - User management (view all students)
 - Block/Unblock cards
 - Transaction history table
-- Analytics dashboard with:
-  - Total users, transactions, revenue
-  - Transactions by meal type
-  - Transactions by location
+- Student CRUD (create, update, delete)
+- Student balance top-up
+- Restaurant CRUD (create, update, delete)
+- Search in students, restaurants, and transactions
+
+### Restaurant Owner Dashboard
+- Menu item CRUD (create, update, delete)
+- Low stock alerts
+- Students assigned this month (count + list)
 
 ## Tech Stack
 
@@ -86,6 +91,32 @@ yarn dev
 
 3. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
+## Using JSON Server (Mock API)
+
+This project can use JSON Server for mock data instead of the built-in Next.js API routes.
+
+1. Install dependencies (if you haven't already):
+```bash
+npm install
+```
+
+2. Start the mock API server:
+```bash
+npm run mock:api
+```
+
+3. Tell the frontend to use JSON Server by setting an environment variable:
+```
+NEXT_PUBLIC_API_PROVIDER=json-server
+```
+
+4. Start the Next.js dev server:
+```bash
+npm run dev
+```
+
+JSON Server will run at http://localhost:3001 and the frontend will use it automatically.
+
 ## API Endpoints
 
 ### Student Endpoints
@@ -100,8 +131,28 @@ yarn dev
 - `POST /api/admin/block-card` - Block a card
 - `POST /api/admin/unblock-card` - Unblock a card
 - `GET /api/admin/transactions` - Get all transactions
+- `GET /api/admin/students` - Get all students
+- `POST /api/admin/students` - Create a student
+- `PUT /api/admin/students/:id` - Update a student
+- `DELETE /api/admin/students/:id` - Delete a student
+- `POST /api/admin/students/:id/top-up` - Add balance to student
+- `GET /api/admin/restaurants` - Get all restaurants
+- `POST /api/admin/restaurants` - Create a restaurant
+- `PUT /api/admin/restaurants/:id` - Update a restaurant
+- `DELETE /api/admin/restaurants/:id` - Delete a restaurant
+
+### Restaurant Owner Endpoints
+
+- `GET /api/owner/dashboard` - Get restaurant owner dashboard data
+- `GET /api/owner/menu` - Get menu items
+- `POST /api/owner/menu` - Create menu item
+- `PUT /api/owner/menu/:id` - Update menu item
+- `DELETE /api/owner/menu/:id` - Delete menu item
+- `GET /api/owner/students` - Get students list for owner dashboard
 
 **Note:** All API endpoints are fake/mock endpoints that return simulated data. They are not connected to a real backend.
+
+When JSON Server is enabled, the mock data is served from [mock/db.json](mock/db.json) using the routes in [mock/routes.json](mock/routes.json).
 
 ## Usage
 
@@ -116,6 +167,12 @@ Example: `http://localhost:3000/student/STU001`
 Navigate to `/admin` to view the admin dashboard.
 
 Example: `http://localhost:3000/admin`
+
+### Accessing Restaurant Owner Dashboard
+
+Navigate to `/owner` to view the restaurant owner dashboard.
+
+Example: `http://localhost:3000/owner`
 
 ## Features Overview
 
@@ -189,4 +246,6 @@ npm run lint
 ## License
 
 This is an academic project for demonstration purposes.
+
+
 
