@@ -32,40 +32,8 @@ RFID-based IoT cashless university canteen payment system frontend built with Ne
 - **Tailwind CSS** - Styling
 - **Axios** - HTTP client for API calls
 
-## Project Structure
 
-```
-Smart Canteen System/
-├── components/          # Reusable React components
-│   ├── Loading.js
-│   ├── Error.js
-│   ├── Notification.js
-│   ├── NotificationList.js
-│   └── MealTimeWindow.js
-├── lib/                 # Utility functions
-│   └── api.js          # API client configuration
-├── pages/              # Next.js pages
-│   ├── api/            # Fake REST API endpoints
-│   │   ├── student/
-│   │   │   └── [id]/
-│   │   │       ├── dashboard.js
-│   │   │       ├── transactions.js
-│   │   │       └── report-lost-card.js
-│   │   └── admin/
-│   │       ├── users.js
-│   │       ├── block-card.js
-│   │       ├── unblock-card.js
-│   │       └── transactions.js
-│   ├── student/
-│   │   └── [id].js     # Student dashboard
-│   ├── admin/
-│   │   └── index.js    # Admin dashboard
-│   ├── _app.js         # App wrapper
-│   └── index.js        # Home page
-├── styles/
-│   └── globals.css     # Global styles with Tailwind
-└── package.json
-```
+
 
 ## Getting Started
 
